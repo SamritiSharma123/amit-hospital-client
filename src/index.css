@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body,#root{
+  width:100%;
+  min-height:100vh;
+  font-family:'Inter',sans-serif;
+}
+
+/* WHOLE WEBSITE BACKGROUND */
+
+body{
+
+  background:
+
+  radial-gradient(circle at 15% 20%, rgba(255,255,255,0.05), transparent 25%),
+
+  radial-gradient(circle at 85% 75%, rgba(120,140,170,0.08), transparent 30%),
+
+  linear-gradient(
+      145deg,
+      #000000 0%,
+      #050505 30%,
+      #10141c 60%,
+      #020202 100%
+  );
+
+  background-attachment: fixed;
+
+  color:white;
+}
+
+/* PARTICLES */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  pointer-events:none;
+
+  background-image:
+  radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+
+  background-size:110px 110px;
+
+  opacity:.07;
+
+  animation:floating 18s linear infinite;
+}
+
+@keyframes floating{
+  from{
+      transform:translateY(0);
+  }
+
+  to{
+      transform:translateY(-80px);
+  }
+}
