@@ -1,21 +1,13 @@
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import "./Home.css";
 
 function Home() {
   return (
-    <>
+    <div className="home-page">
       <Header />
-
-      <div style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        color: "white",
-        fontSize: "3rem"
-      }}>
-        Homepage starts here
-      </div>
-    </>
+      <Hero />
+    </div>
   );
 }
 
