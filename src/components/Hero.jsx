@@ -7,10 +7,6 @@ function Hero() {
       {/* Left Content */}
       <div className="hero-left">
 
-        <p className="hero-subtitle">
-          ADVANCED CHEST & RESPIRATORY INSTITUTE
-        </p>
-
         <h1 className="hero-title">
           Redefining <br />
           Respiratory <br />
@@ -52,7 +48,7 @@ function Hero() {
 
         <div className="stat-card card1">
           <h3>15+</h3>
-          <p>Specialists</p>
+          <p>Specialist Doctor</p>
         </div>
 
         <div className="stat-card card2">
