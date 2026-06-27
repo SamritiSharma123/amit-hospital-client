@@ -1,193 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap');
-
-.facilities-section{
-
-    min-height:100vh;
-
-    padding:120px 8%;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:70px;
-
-    align-items:center;
-
-    background:
-    linear-gradient(
-        180deg,
-        #020202,
-        #07101c
-    );
-
-    color:white;
+.facilities {
+  width: 90%;
+  margin: 120px auto;
+  color: white;
 }
 
-/* LEFT */
-
-.facilities-left{
-
-    flex:1;
+/* heading */
+.section-heading {
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-.facilities-tag{
-
-    letter-spacing:4px;
-
-    color:#bcbcbc;
-
-    margin-bottom:20px;
-
-    font-size:.85rem;
+.section-heading span {
+  color: #d4b06a;
+  letter-spacing: 3px;
+  font-size: 25Spx;
 }
 
-.facilities-left h2{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:clamp(3rem,6vw,5.5rem);
-
-    line-height:1;
-
-    margin-bottom:30px;
+.section-heading h2 {
+  font-size: 56px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  margin: 15px 0 18px 0;
 }
 
-.facilities-text{
-
-    color:#d5d5d5;
-
-    width:85%;
-
-    line-height:1.9;
+/* gold underline */
+.heading-line {
+  width: 120px;
+  height: 3px;
+  background: #d4b06a;
+  margin: auto;
+  border-radius: 10px;
 }
 
-/* RIGHT */
-
-.facilities-right{
-
-    flex:1.2;
+.section-heading p {
+  max-width: 750px;
+  margin: 25px auto 0;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  font-size: 17px;
 }
 
-/* GRID */
-
-.facility-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:22px;
-
-    margin-bottom:30px;
+/* grid */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
 }
 
-/* CARD */
+/* card */
+.facility-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
 
-.facility-card{
-
-    padding:28px;
-
-    border-radius:28px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    cursor:pointer;
-
-    transition:.35s ease;
+  transition: 0.4s ease;
 }
 
-.facility-card:hover{
-
-    transform:translateY(-6px);
-
-    border-color:#d4af37;
+.facility-card:hover {
+  transform: translateY(-8px);
+  border-color: #d4b06a;
 }
 
-.facility-card span{
-
-    color:#d4af37;
-
-    font-size:.9rem;
+/* image */
+.facility-image {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
 }
 
-.facility-card h3{
+/* IMPORTANT → fixes face cropping */
+.facility-image img {
+  width: 100%;
+  height: 100%;
 
-    margin:14px 0;
+  object-fit: cover;
+  object-position: center top;
 
-    font-size:1.2rem;
+  transition: 0.5s ease;
 }
 
-.facility-card p{
-
-    color:#bfbfbf;
-
-    line-height:1.7;
-
-    font-size:.92rem;
+.facility-card:hover img {
+  transform: scale(1.05);
 }
 
-/* IMAGE PREVIEW */
-
-.facility-preview{
-
-    width:100%;
-
-    height:320px;
-
-    border-radius:30px;
-
-    overflow:hidden;
-
-    border:1px solid rgba(255,255,255,.08);
+/* content */
+.facility-content {
+  padding: 28px;
 }
 
-.facility-preview img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s ease;
+.facility-content h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-    .facilities-section{
-
-        flex-direction:column;
-
-        text-align:center;
-    }
-
-    .facilities-text{
-
-        width:100%;
-    }
+.facility-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 25px;
 }
 
-@media(max-width:700px){
+/* button */
+.facility-content button {
+  background: transparent;
+  color: #d4b06a;
+  border: none;
+  cursor: pointer;
 
-    .facility-grid{
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
-        grid-template-columns:1fr;
-    }
+/* mobile */
+@media(max-width:1100px) {
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    .facilities-left h2{
+@media(max-width:700px) {
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
 
-        font-size:2.6rem;
-    }
-
-    .facility-preview{
-
-        height:240px;
-    }
+  .section-heading h2 {
+    font-size: 38px;
+  }
 }

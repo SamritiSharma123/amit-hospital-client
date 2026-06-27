@@ -1,71 +1,68 @@
-import { useState } from "react";
 import "./Facilities.css";
 
 function Facilities() {
-  const [activeImage, setActiveImage] = useState("/lab.jpg");
-
   const facilities = [
     {
       title: "Advanced Diagnostic Lab",
-      desc: "Precision testing and advanced health diagnostics.",
-      image: "/Advfac.jpg",
+      desc: "State-of-the-art diagnostic equipment for accurate and reliable test results.",
+      image: "./Advfac.png",
+    },
+    {
+      title: "Specialist Consultation",
+      desc: "Experienced specialists providing personalized consultation and evidence-based treatment.",
+      image: "./doctor.jpg",
     },
     {
       title: "In-House Pharmacy",
-      desc: "Immediate medicine access under one roof.",
-      image: "/Medicine.jpg",
+      desc: "Fully stocked pharmacy ensuring genuine medicines and immediate availability.",
+      image: "./Medicine.png",
     },
-    
+    {
+      title: "Comfortable Patient Care",
+      desc: "Well-equipped rooms and attentive care for faster recovery.",
+      image: "./Ward.png",
+    },
   ];
 
   return (
-    <section className="facilities-section">
+    <section className="facilities">
 
-      <div className="facilities-left">
+      <div className="section-heading">
 
-        <p className="facilities-tag">
-          SPECIALIZED CARE
-        </p>
+        <span>OUR FACILITIES</span>
 
-        <h2>
-          Advanced Facilities <br />
-          & Treatment Expertise
-        </h2>
+        <h2>Designed Around Better Patient Care</h2>
 
-        <p className="facilities-text">
-          Amit Hospital combines specialized chest and diabetic care
-          with advanced diagnostics, modern treatment protocols and
-          patient-focused healthcare infrastructure built around trust.
+        <div className="heading-line"></div>
+
+        <p>
+          Amit Hospital combines advanced technology, modern infrastructure
+          and specialized care to deliver the best possible experience.
         </p>
 
       </div>
 
-      <div className="facilities-right">
+      <div className="facilities-grid">
 
-        <div className="facility-grid">
+        {facilities.map((item, index) => (
+          <div className="facility-card" key={index}>
 
-          {facilities.map((item, index) => (
-            <div
-              key={index}
-              className="facility-card"
-              onMouseEnter={() => setActiveImage(item.image)}
-            >
-              <span>0{index + 1}</span>
+            <div className="facility-image">
+              <img src={item.image} alt={item.title} />
+            </div>
+
+            <div className="facility-content">
 
               <h3>{item.title}</h3>
 
               <p>{item.desc}</p>
 
+             
+
             </div>
-          ))}
 
-        </div>
-
-        <div className="facility-preview">
-
-          <img src={activeImage} alt="facility" />
-
-        </div>
+          </div>
+        ))}
 
       </div>
 

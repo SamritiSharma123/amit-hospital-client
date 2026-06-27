@@ -1,62 +1,59 @@
+import { useState, useEffect } from "react";
 import "./Hero.css";
 
 function Hero() {
+  const images = [
+    "./Fac.png",
+    "./Reception.png",
+    "./Ward.png",
+    "./Medicine.png",
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero">
 
-      {/* Background Overlay */}
-      <div className="hero-overlay"></div>
+      {/* actual image */}
+      <img
+        src={images[current]}
+        alt="hospital"
+        className="hero-image"
+      />
 
-      {/* Main Content */}
+      <div className="overlay"></div>
 
       <div className="hero-content">
+        <div className="left">
 
-        <div className="left-content">
+          <span className="tag">
+            CHEST • DIABETES SPECIALIST
+          </span>
 
-          <p className="hero-subtitle">
-            CHEST & DIABETIC CENTER
-          </p>
-
-          <h1 className="hero-title">
-            Breathe Better, <br />
-            Live Healthier.
+          <h1>
+            Premium Care <br />
+            For Better Health
           </h1>
 
-          <p className="hero-text">
-            Specialized respiratory and diabetic care designed
-            around precision treatment, trust and compassionate healing.
+          <p>
+            Trusted diagnosis, advanced treatment and specialist consultation
+            for respiratory and diabetic care.
           </p>
 
-          <div className="hero-buttons">
-
-            <button className="book-btn">
-              Book Appointment
-            </button>
-
-            <button className="explore-btn">
-              Learn More
-            </button>
-
+          <div className="buttons">
+            <button>Schedule Consultation</button>
           </div>
 
         </div>
-
-
-        {/* Doctor Card */}
-
-        <div className="doctor-card">
-
-          <h2>Dr. Amit</h2>
-
-          <p>
-            MBBS • DTCD <br />
-            Fellowship in Diabetes
-          </p>
-
-        </div>
-
       </div>
-
     </section>
   );
 }
