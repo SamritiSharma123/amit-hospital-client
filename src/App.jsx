@@ -3,19 +3,22 @@ import Loader from "./components/Loader";
 import Home from "./pages/Home";
 
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
     const timer = setTimeout(() => {
-      setShowLoader(false);
-    }, 5000); // change to 60000 if you really want 60 sec
+      setLoading(false);
+    }, 5000);
 
     return () => clearTimeout(timer);
+
   }, []);
 
   return (
     <>
-      {showLoader ? <Loader /> : <Home />}
+      {loading ? <Loader /> : <Home />}
     </>
   );
 }

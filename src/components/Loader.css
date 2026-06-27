@@ -6,16 +6,6 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-/* MAIN SCREEN */
-
 .loader-page {
   width: 100vw;
   height: 100vh;
@@ -231,7 +221,7 @@ body,
 
   margin: 40px auto 0 auto;
 
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .progress-bar {

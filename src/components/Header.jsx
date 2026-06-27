@@ -8,40 +8,60 @@ function Header() {
     <>
       <header className="navbar">
 
-        <div className="nav-shine"></div>
+        {/* Premium moving reflection */}
+        <div className="nav-reflection"></div>
 
+        {/* Logo */}
         <div className="logo">
-          AMIT HOSPITAL
+          Amit Hospital
         </div>
 
-        <nav className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        {/* Desktop Navigation */}
+        <nav className="desktop-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
         </nav>
 
-        <button className="book-btn">
+        {/* Appointment Button */}
+        <button className="appointment-btn">
           Book Appointment
         </button>
 
-        {/* Mobile menu button */}
-        <div
+        {/* Mobile Hamburger */}
+        <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          ☰
+        </button>
 
       </header>
 
-      {/* Mobile menu */}
-      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <button>Book Appointment</button>
+      {/* Mobile Menu */}
+      <div className={`mobile-nav ${menuOpen ? "show" : ""}`}>
+
+        <a href="#home" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
+
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About
+        </a>
+
+        <a href="#services" onClick={() => setMenuOpen(false)}>
+          Services
+        </a>
+
+        <a href="#contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
+
+        <button>
+          Book Appointment
+        </button>
+
       </div>
     </>
   );

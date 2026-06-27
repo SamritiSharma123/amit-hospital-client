@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+.facilities-section{
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #020202,
+        #07101c
+    );
+
+    color:white;
+}
+
+/* LEFT */
+
+.facilities-left{
+
+    flex:1;
+}
+
+.facilities-tag{
+
+    letter-spacing:4px;
+
+    color:#bcbcbc;
+
+    margin-bottom:20px;
+
+    font-size:.85rem;
+}
+
+.facilities-left h2{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    line-height:1;
+
+    margin-bottom:30px;
+}
+
+.facilities-text{
+
+    color:#d5d5d5;
+
+    width:85%;
+
+    line-height:1.9;
+}
+
+/* RIGHT */
+
+.facilities-right{
+
+    flex:1.2;
+}
+
+/* GRID */
+
+.facility-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:30px;
+}
+
+/* CARD */
+
+.facility-card{
+
+    padding:28px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    cursor:pointer;
+
+    transition:.35s ease;
+}
+
+.facility-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+}
+
+.facility-card span{
+
+    color:#d4af37;
+
+    font-size:.9rem;
+}
+
+.facility-card h3{
+
+    margin:14px 0;
+
+    font-size:1.2rem;
+}
+
+.facility-card p{
+
+    color:#bfbfbf;
+
+    line-height:1.7;
+
+    font-size:.92rem;
+}
+
+/* IMAGE PREVIEW */
+
+.facility-preview{
+
+    width:100%;
+
+    height:320px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.facility-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .facilities-section{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .facilities-text{
+
+        width:100%;
+    }
+}
+
+@media(max-width:700px){
+
+    .facility-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .facilities-left h2{
+
+        font-size:2.6rem;
+    }
+
+    .facility-preview{
+
+        height:240px;
+    }
+}

@@ -2,58 +2,57 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero">
 
-      {/* Left Content */}
-      <div className="hero-left">
+      {/* Background Overlay */}
+      <div className="hero-overlay"></div>
 
-        <h1 className="hero-title">
-          Redefining <br />
-          Respiratory <br />
-          Excellence
-        </h1>
+      {/* Main Content */}
 
-        <p className="hero-description">
-          Specialized pulmonary care powered by precision diagnostics,
-          advanced respiratory medicine, and world-class healthcare expertise.
-        </p>
+      <div className="hero-content">
 
-        <div className="hero-buttons">
-          <button className="primary-btn">
-            Book Appointment
-          </button>
+        <div className="left-content">
 
-          <button className="secondary-btn">
-            Explore Services
-          </button>
-        </div>
+          <p className="hero-subtitle">
+            CHEST & DIABETIC CENTER
+          </p>
 
-      </div>
+          <h1 className="hero-title">
+            Breathe Better, <br />
+            Live Healthier.
+          </h1>
 
-      {/* Right Visual */}
-      <div className="hero-right">
+          <p className="hero-text">
+            Specialized respiratory and diabetic care designed
+            around precision treatment, trust and compassionate healing.
+          </p>
 
-        <div className="glass-circle">
+          <div className="hero-buttons">
 
-          <div className="pulse-ring"></div>
+            <button className="book-btn">
+              Book Appointment
+            </button>
 
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2966/2966489.png"
-            alt="lungs"
-          />
+            <button className="explore-btn">
+              Learn More
+            </button>
+
+          </div>
 
         </div>
 
-        {/* floating cards */}
 
-        <div className="stat-card card1">
-          <h3>15+</h3>
-          <p>Specialist Doctor</p>
-        </div>
+        {/* Doctor Card */}
 
-        <div className="stat-card card2">
-          <h3>24/7</h3>
-          <p>Critical Care</p>
+        <div className="doctor-card">
+
+          <h2>Dr. Amit</h2>
+
+          <p>
+            MBBS • DTCD <br />
+            Fellowship in Diabetes
+          </p>
+
         </div>
 
       </div>
