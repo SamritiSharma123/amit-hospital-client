@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Facilities from "../components/Facilities";
 import Services from "../components/Services";
-
+import Footer from "../components/Footer";
 import "./Home.css";
 
 function Home(){
@@ -17,6 +17,8 @@ function Home(){
       <Facilities />
 
       <Services />
+
+      <Footer />
 
     </div>
   )

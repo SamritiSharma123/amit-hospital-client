@@ -6,14 +6,14 @@
   box-sizing:border-box;
 }
 
-/* ================= PAGE ================= */
+/* PAGE */
 
 .about-page{
   width:100%;
   min-height:100vh;
   color:white;
-  padding-bottom:120px;
   overflow:hidden;
+  padding-bottom:100px;
 }
 
 /* ================= HERO ================= */
@@ -31,7 +31,7 @@
   background-position:center;
   opacity:0;
   transform:scale(1);
-  transition:opacity 1.4s ease, transform 5s ease;
+  transition:1.3s ease;
 }
 
 .hero-slide.active{
@@ -44,30 +44,30 @@
   inset:0;
   background:linear-gradient(
       90deg,
-      rgba(0,0,0,.82),
+      rgba(0,0,0,.85),
       rgba(0,0,0,.35),
-      rgba(0,0,0,.72)
+      rgba(0,0,0,.75)
   );
 }
 
 .hero-content{
   position:absolute;
+  top:55%;
   left:8%;
-  top:52%;
   transform:translateY(-50%);
-  z-index:20;
+  z-index:10;
 }
 
 .hero-content p{
   color:#d4b06a;
   letter-spacing:4px;
-  margin-bottom:25px;
+  margin-bottom:20px;
   font-size:14px;
 }
 
 .hero-content h1{
-  font-size:7rem;
-  line-height:.92;
+  font-size:6.5rem;
+  line-height:.95;
   font-family:'Cormorant Garamond', serif;
   margin-bottom:40px;
 }
@@ -78,28 +78,21 @@
 }
 
 .gold-btn{
-  padding:18px 38px;
+  padding:16px 34px;
   border:none;
   border-radius:40px;
   cursor:pointer;
   font-weight:600;
-
-  background:linear-gradient(
-      90deg,
-      #c8a648,
-      #f0d67a
-  );
+  background:linear-gradient(90deg,#c8a648,#f0d67a);
 }
 
 .glass-btn{
-  padding:18px 38px;
+  padding:16px 34px;
   border-radius:40px;
   border:1px solid rgba(255,255,255,.15);
   cursor:pointer;
   color:white;
-
   background:rgba(255,255,255,.05);
-
   backdrop-filter:blur(15px);
 }
 
@@ -107,15 +100,14 @@
 
 .legacy-section{
   width:90%;
-  margin:150px auto;
-
+  margin:130px auto;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:90px;
+  gap:80px;
 }
 
 .legacy-left h2{
-  font-size:7rem;
+  font-size:6rem;
   line-height:.95;
   font-family:'Cormorant Garamond', serif;
 }
@@ -125,75 +117,53 @@
 }
 
 .legacy-right p{
-  color:rgba(255,255,255,.78);
   line-height:2;
-  margin-bottom:30px;
-  font-size:17px;
+  margin-bottom:25px;
+  color:rgba(255,255,255,.78);
+  font-size:16px;
 }
 
 /* ================= DOCTOR ================= */
 
 .doctor-showcase{
-
   width:90%;
   margin:120px auto;
-
   display:grid;
-  grid-template-columns:500px 1fr;
-  gap:70px;
-
-  padding:50px;
-
-  border-radius:38px;
-
+  grid-template-columns:450px 1fr;
+  gap:60px;
+  padding:45px;
+  border-radius:35px;
   position:relative;
   overflow:hidden;
-
-  background:
-  linear-gradient(
+  background:linear-gradient(
       145deg,
       rgba(255,255,255,.08),
       rgba(255,255,255,.02)
   );
-
   border:1px solid rgba(255,255,255,.08);
-
   backdrop-filter:blur(28px);
 }
 
-/* moving reflection */
-
 .doctor-showcase::before{
   content:"";
-
   position:absolute;
-
   top:0;
   left:-40%;
-
   width:35%;
   height:100%;
-
   background:linear-gradient(
       90deg,
       transparent,
-      rgba(255,255,255,.12),
+      rgba(255,255,255,.10),
       transparent
   );
-
   transform:skewX(-25deg);
-
-  animation:glassMove 7s infinite linear;
+  animation:glassMove 8s infinite linear;
 }
 
 @keyframes glassMove{
-  0%{
-      left:-40%;
-  }
-
-  100%{
-      left:140%;
-  }
+  0%{left:-40%;}
+  100%{left:140%;}
 }
 
 .doctor-photo,
@@ -204,50 +174,46 @@
 
 .doctor-photo img{
   width:100%;
-  height:650px;
+  height:600px;
   object-fit:cover;
-  border-radius:28px;
+  border-radius:25px;
 }
 
 .mini{
   color:#d4b06a;
   letter-spacing:4px;
+  margin-bottom:18px;
   font-size:14px;
-  margin-bottom:20px;
 }
 
 .doctor-details h2{
-  font-size:6rem;
-  margin-bottom:30px;
+  font-size:5rem;
+  margin-bottom:25px;
   font-family:'Cormorant Garamond', serif;
 }
 
 .doctor-tags{
   display:flex;
-  gap:15px;
+  gap:12px;
   flex-wrap:wrap;
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .doctor-tags div{
-  padding:14px 22px;
-  border-radius:35px;
-
+  padding:12px 18px;
+  border-radius:30px;
   background:rgba(255,255,255,.05);
-
   border:1px solid rgba(255,255,255,.08);
 }
 
-/* stats */
-
 .doctor-stats{
   display:flex;
-  gap:40px;
-  margin-bottom:35px;
+  gap:35px;
+  margin-bottom:30px;
 }
 
 .doctor-stats h3{
-  font-size:2rem;
+  font-size:1.8rem;
   color:#d4b06a;
 }
 
@@ -256,48 +222,45 @@
 }
 
 .doctor-desc{
-  line-height:2;
+  line-height:1.9;
   color:rgba(255,255,255,.78);
 }
 
-/* ================= FACILITIES ================= */
+/* ================= FACILITY ================= */
 
 .facility-strip{
   width:92%;
-  margin:140px auto;
+  margin:130px auto;
 }
 
 .facility-heading{
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:55px;
 }
 
 .facility-heading p{
   color:#d4b06a;
   letter-spacing:4px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .facility-heading h2{
-  font-size:5rem;
+  font-size:4.5rem;
   line-height:1;
   font-family:'Cormorant Garamond', serif;
 }
 
-/* row */
-
 .facility-row{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:22px;
+  gap:20px;
 }
 
 .facility-panel{
   position:relative;
-  height:500px;
+  height:420px;
+  border-radius:28px;
   overflow:hidden;
-  border-radius:30px;
-  cursor:pointer;
 }
 
 .facility-panel img{
@@ -314,21 +277,18 @@
 .facility-overlay{
   position:absolute;
   inset:0;
-
   display:flex;
   align-items:flex-end;
-
-  padding:30px;
-
+  padding:25px;
   background:linear-gradient(
       180deg,
       transparent,
-      rgba(0,0,0,.85)
+      rgba(0,0,0,.88)
   );
 }
 
 .facility-overlay h3{
-  font-size:2rem;
+  font-size:1.8rem;
   font-family:'Cormorant Garamond', serif;
 }
 
@@ -336,50 +296,42 @@
 
 .trust-premium{
   width:90%;
-  margin:150px auto;
+  margin:120px auto;
 }
 
 .trust-glass{
-
-  padding:70px;
-
-  border-radius:40px;
-
+  padding:60px;
+  border-radius:35px;
   text-align:center;
-
-  background:
-  linear-gradient(
+  background:linear-gradient(
       145deg,
-      rgba(255,255,255,.07),
+      rgba(255,255,255,.06),
       rgba(255,255,255,.02)
   );
-
   border:1px solid rgba(255,255,255,.08);
-
   backdrop-filter:blur(25px);
 }
 
 .trust-glass h2{
-  font-size:4.5rem;
-  margin-bottom:18px;
+  font-size:4rem;
+  margin-bottom:20px;
   font-family:'Cormorant Garamond', serif;
 }
 
 .trust-glass p{
-  margin-bottom:40px;
+  margin-bottom:35px;
   color:rgba(255,255,255,.78);
 }
 
 .trust-list{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  gap:20px;
 }
 
 .trust-list span{
-  padding:20px;
-  border-radius:20px;
-
+  padding:18px;
+  border-radius:18px;
   background:rgba(255,255,255,.04);
 }
 
@@ -387,177 +339,70 @@
 
 .final-cta{
   width:90%;
-  margin:140px auto;
+  margin:120px auto;
 }
 
 .cta-box{
-
-  padding:100px;
-
-  border-radius:40px;
-
+  padding:80px;
+  border-radius:35px;
   text-align:center;
-
-  background:
-  linear-gradient(
+  background:linear-gradient(
       145deg,
       rgba(255,255,255,.06),
       rgba(255,255,255,.02)
   );
-
   border:1px solid rgba(255,255,255,.08);
-
-  position:relative;
-  overflow:hidden;
-}
-
-.cta-box::before{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:-40%;
-
-  width:40%;
-  height:100%;
-
-  background:linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,.12),
-      transparent
-  );
-
-  transform:skewX(-25deg);
-
-  animation:glassMove 8s infinite linear;
 }
 
 .cta-box h2{
-  position:relative;
-  z-index:5;
-
-  font-size:5rem;
+  font-size:4rem;
   line-height:1;
-  margin-bottom:35px;
-
+  margin-bottom:30px;
   font-family:'Cormorant Garamond', serif;
 }
 
 .cta-box button{
-  position:relative;
-  z-index:5;
-
-  padding:18px 40px;
-
+  padding:16px 36px;
   border:none;
   border-radius:40px;
-
   cursor:pointer;
   font-weight:600;
-
-  background:linear-gradient(
-      90deg,
-      #c8a648,
-      #f0d67a
-  );
+  background:linear-gradient(90deg,#c8a648,#f0d67a);
 }
-
-/* ================= RESPONSIVE ================= */
 
 /* ================= TABLET ================= */
 
 @media(max-width:1100px){
 
-  /* hero */
-
-  .hero-content{
-    left:6%;
-    top:55%;
-  }
-
   .hero-content h1{
-    font-size:4.8rem;
-    line-height:1;
+    font-size:4.5rem;
   }
-
-  /* legacy */
 
   .legacy-section{
     grid-template-columns:1fr;
-    gap:40px;
-    margin:100px auto;
-  }
-
-  .legacy-left h2{
-    font-size:4.2rem;
-  }
-
-  /* doctor */
-
-  .doctor-showcase{
-    grid-template-columns:1fr;
-    padding:35px;
     gap:35px;
   }
 
-  .doctor-photo img{
-    height:500px;
-  }
-
-  .doctor-details h2{
+  .legacy-left h2{
     font-size:4rem;
   }
 
-  /* facilities */
+  .doctor-showcase{
+    grid-template-columns:1fr;
+  }
 
   .facility-row{
     grid-template-columns:1fr 1fr;
   }
 
-  .facility-panel{
-    height:350px;
-  }
-
-  .facility-heading h2{
-    font-size:3.8rem;
-  }
-
-  /* trust */
-
   .trust-list{
     grid-template-columns:1fr;
   }
-
-  .trust-glass h2{
-    font-size:3rem;
-  }
-
-  /* cta */
-
-  .cta-box{
-    padding:70px 40px;
-  }
-
-  .cta-box h2{
-    font-size:3.5rem;
-  }
 }
-
 
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
-
-  /* page spacing */
-
-  .about-page{
-    padding-bottom:60px;
-  }
-
-  /* hero */
 
   .premium-hero{
     height:80vh;
@@ -566,25 +411,21 @@
   .hero-content{
     left:5%;
     right:5%;
-    top:55%;
-    transform:translateY(-50%);
   }
 
   .hero-content p{
     font-size:11px;
-    letter-spacing:2px;
   }
 
   .hero-content h1{
-    font-size:2.8rem;
-    line-height:1.05;
-    margin-bottom:25px;
+    font-size:2rem;
+    line-height:1.15;
+    max-width:320px;
   }
 
   .hero-buttons{
     flex-direction:column;
     width:100%;
-    gap:12px;
   }
 
   .gold-btn,
@@ -593,17 +434,14 @@
     padding:14px;
   }
 
-  /* legacy */
-
   .legacy-section{
-    width:92%;
+    width:94%;
     margin:70px auto;
-    gap:25px;
   }
 
   .legacy-left h2{
-    font-size:2.5rem;
-    line-height:1.1;
+    font-size:1.9rem;
+    line-height:1.2;
   }
 
   .legacy-right{
@@ -612,37 +450,26 @@
 
   .legacy-right p{
     font-size:14px;
-    line-height:1.8;
   }
-
-  /* doctor */
 
   .doctor-showcase{
     width:94%;
     margin:70px auto;
     padding:20px;
     gap:20px;
-    border-radius:22px;
   }
 
   .doctor-photo img{
     height:320px;
-    border-radius:18px;
   }
 
   .doctor-details h2{
-    font-size:2.6rem;
-    margin-bottom:20px;
-  }
-
-  .doctor-tags{
-    gap:10px;
-    margin-bottom:20px;
+    font-size:2rem;
   }
 
   .doctor-tags div{
-    padding:10px 14px;
     font-size:12px;
+    padding:10px 14px;
   }
 
   .doctor-stats{
@@ -650,16 +477,9 @@
     gap:15px;
   }
 
-  .doctor-stats h3{
-    font-size:1.4rem;
-  }
-
   .doctor-desc{
     font-size:14px;
-    line-height:1.8;
   }
-
-  /* facilities */
 
   .facility-strip{
     width:94%;
@@ -668,28 +488,16 @@
 
   .facility-row{
     grid-template-columns:1fr;
-    gap:18px;
   }
 
   .facility-heading h2{
-    font-size:2.4rem;
-    line-height:1.1;
+    font-size:1.9rem;
+    line-height:1.2;
   }
 
   .facility-panel{
     height:280px;
-    border-radius:20px;
   }
-
-  .facility-overlay{
-    padding:20px;
-  }
-
-  .facility-overlay h3{
-    font-size:1.5rem;
-  }
-
-  /* trust */
 
   .trust-premium{
     width:94%;
@@ -697,28 +505,17 @@
   }
 
   .trust-glass{
-    padding:35px 20px;
-    border-radius:22px;
+    padding:30px 18px;
   }
 
   .trust-glass h2{
-    font-size:2.2rem;
-  }
-
-  .trust-glass p{
-    font-size:14px;
-  }
-
-  .trust-list{
-    gap:12px;
+    font-size:2rem;
   }
 
   .trust-list span{
-    padding:14px;
     font-size:13px;
+    padding:12px;
   }
-
-  /* CTA */
 
   .final-cta{
     width:94%;
@@ -726,48 +523,44 @@
   }
 
   .cta-box{
-    padding:40px 20px;
-    border-radius:22px;
+    padding:40px 18px;
   }
 
   .cta-box h2{
-    font-size:2.3rem;
-    line-height:1.15;
-    margin-bottom:20px;
+    font-size:1.8rem;
+    line-height:1.2;
   }
 
   .cta-box button{
     width:100%;
-    padding:14px;
   }
 }
-
 
 /* ================= SMALL MOBILE ================= */
 
 @media(max-width:480px){
 
   .hero-content h1{
-    font-size:2.2rem;
+    font-size:1.65rem;
   }
 
   .legacy-left h2{
-    font-size:2rem;
+    font-size:1.6rem;
   }
 
   .doctor-details h2{
-    font-size:2.1rem;
+    font-size:1.7rem;
   }
 
   .facility-heading h2{
-    font-size:2rem;
+    font-size:1.6rem;
   }
 
   .trust-glass h2{
-    font-size:1.8rem;
+    font-size:1.7rem;
   }
 
   .cta-box h2{
-    font-size:1.9rem;
+    font-size:1.5rem;
   }
 }

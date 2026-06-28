@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./About.css";
 
 function About() {
@@ -62,23 +63,13 @@ function About() {
 
           <div className="hero-content">
 
-            <p>PREMIUM HEALTHCARE EXPERIENCE</p>
+  
 
             <h1>
               Redefining <br />
               Modern Healthcare <br />
               Excellence.
             </h1>
-
-            <div className="hero-buttons">
-              <button className="gold-btn">
-                Book Appointment
-              </button>
-
-              <button className="glass-btn">
-                Explore Care
-              </button>
-            </div>
 
           </div>
 
@@ -128,7 +119,7 @@ function About() {
 
           <div className="doctor-photo">
 
-            <img src="./doctor.jpg" alt="Doctor" />
+            <img src="./Amit.png" alt="Doctor" />
 
           </div>
 
@@ -140,7 +131,7 @@ function About() {
             </p>
 
             <h2>
-              Dr Amit
+              Dr Amit Sharma
             </h2>
 
             <div className="doctor-tags">
@@ -261,7 +252,9 @@ function About() {
         
 
       </div>
+       <Footer />
     </>
+   
   );
 }
 
