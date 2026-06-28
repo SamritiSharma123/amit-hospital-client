@@ -3,7 +3,7 @@ import Loader from "./components/Loader";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-
+import Contact from "./pages/Contact";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
       <Route path="/amit-hospital-client/" element={<Home />} />
 
       <Route path="/amit-hospital-client/about" element={<About />} />
+
+      <Route path="/amit-hospital-client/contact" element={<Contact />} />
     </Routes>
   );
 }

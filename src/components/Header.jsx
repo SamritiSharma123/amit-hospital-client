@@ -39,9 +39,9 @@ function Header() {
             Services
           </a>
 
-          <a href="/amit-hospital-client/#contact">
+          <Link to="/amit-hospital-client/contact">
             Contact
-          </a>
+          </Link>
 
         </nav>
 
