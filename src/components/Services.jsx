@@ -36,7 +36,7 @@ function Services() {
 
   return (
 
-    <section className="services-home">
+    <section className="services-home"  id="services" >
 
       <div className="services-heading">
 
