@@ -1,66 +1,284 @@
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* actual image */
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* ================= HERO ================= */
+
+.hero{
+
+  position:relative;
+
+  width:100%;
+
+  height:100vh;
+
+  overflow:hidden;
 }
 
-/* dark overlay */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 15, 40, 0.55);
+/* background image */
+
+.hero-image{
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;          /* FULL COVER */
+
+  object-position:center center;
+
+  transition:1s ease;
+}
+
+/* overlay */
+
+.overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+      90deg,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.75)
+  );
 }
 
 /* content */
-.hero-content {
-  position: relative;
-  z-index: 10;
-  height: 100%;
 
-  display: flex;
-  align-items: center;
+.hero-content{
 
-  padding-left: 90px;
-  color: white;
+  position:relative;
+
+  z-index:10;
+
+  width:100%;
+
+  height:100%;
+
+  display:flex;
+  align-items:center;
+
+  padding-left:8%;
 }
 
-.left {
-  max-width: 650px;
+.left{
+
+  max-width:720px;
 }
 
-.tag {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #e8c46b;
+.hero-mini{
+
+  color:#d4b06a;
+
+  letter-spacing:4px;
+
+  font-size:14px;
+
+  margin-bottom:22px;
+
+  font-family:Inter,sans-serif;
 }
 
-.left h1 {
-  font-size: 64px;
-  margin: 20px 0;
-  line-height: 1.1;
+.left h1{
+
+  font-size:6.2rem;
+
+  line-height:.95;
+
+  color:white;
+
+  margin-bottom:25px;
+
+  font-family:'Cormorant Garamond', serif;
 }
 
-.left p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+.hero-text{
+
+  font-size:17px;
+
+  line-height:1.9;
+
+  color:rgba(255,255,255,.82);
+
+  margin-bottom:35px;
+
+  max-width:600px;
 }
 
-.buttons button {
-  background: #e8c46b;
-  border: none;
-  padding: 15px 28px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
+/* button */
+
+.buttons button{
+
+  padding:18px 38px;
+
+  border:none;
+
+  border-radius:40px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  background:
+  linear-gradient(
+      90deg,
+      #c8a648,
+      #f0d67a
+  );
+
+  margin-bottom:35px;
+
+  transition:.3s ease;
+}
+
+.buttons button:hover{
+
+  transform:translateY(-2px);
+}
+
+/* icons */
+
+.hero-icons{
+
+  display:flex;
+
+  gap:15px;
+}
+
+.hero-icons a{
+
+  width:58px;
+  height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+      145deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.02)
+  );
+
+  border:1px solid rgba(255,255,255,.10);
+
+  backdrop-filter:blur(18px);
+
+  transition:.3s ease;
+}
+
+.hero-icons a:hover{
+
+  transform:translateY(-4px);
+
+  border-color:#d4b06a;
+}
+
+/* ================= tablet ================= */
+
+@media(max-width:1100px){
+
+  .left h1{
+
+      font-size:4.5rem;
+  }
+
+  .hero-text{
+
+      max-width:500px;
+  }
+}
+
+/* ================= mobile ================= */
+
+@media(max-width:768px){
+
+  .hero{
+
+      height:85vh;
+  }
+
+  .hero-content{
+
+      padding:0 5%;
+  }
+
+  .left{
+
+      max-width:100%;
+  }
+
+  .left h1{
+
+      font-size:2.8rem;
+
+      line-height:1.05;
+  }
+
+  .hero-text{
+
+      font-size:14px;
+
+      line-height:1.7;
+  }
+
+  .buttons button{
+
+      width:100%;
+
+      padding:14px;
+  }
+
+  .hero-icons{
+
+      gap:10px;
+
+      flex-wrap:wrap;
+  }
+
+  .hero-icons a{
+
+      width:46px;
+      height:46px;
+
+      font-size:15px;
+
+      border-radius:14px;
+  }
+}
+
+/* small phones */
+
+@media(max-width:480px){
+
+  .left h1{
+
+      font-size:2.1rem;
+  }
+
+  .hero-mini{
+
+      font-size:11px;
+  }
 }

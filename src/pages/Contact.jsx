@@ -1,7 +1,12 @@
 import "./Contact.css";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 function Contact() {
   return (
+      <>
+      <Header />
+
+    
     <section className="contact-premium" id="contact">
 
       {/* moving glass reflection */}
@@ -192,6 +197,8 @@ function Contact() {
       </div>
 
     </section>
+    <Footer />
+    </>
   );
 }
 
