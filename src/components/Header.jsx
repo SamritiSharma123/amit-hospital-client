@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
@@ -8,28 +9,50 @@ function Header() {
     <>
       <header className="navbar">
 
-        {/* Premium moving reflection */}
+        {/* Moving glass reflection */}
         <div className="nav-reflection"></div>
 
         {/* Logo */}
-        <div className="logo">
+
+        <Link
+          to="/amit-hospital-client/"
+          className="logo"
+        >
           Amit Hospital
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
+
         <nav className="desktop-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+
+          <Link to="/amit-hospital-client/">
+            Home
+          </Link>
+
+          <Link to="/amit-hospital-client/about">
+            About
+          </Link>
+
+          {/* Homepage section */}
+
+          <a href="/amit-hospital-client/#services">
+            Services
+          </a>
+
+          <a href="/amit-hospital-client/#contact">
+            Contact
+          </a>
+
         </nav>
 
-        {/* Appointment Button */}
+        {/* Button */}
+
         <button className="appointment-btn">
           Book Appointment
         </button>
 
         {/* Mobile Hamburger */}
+
         <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -40,21 +63,34 @@ function Header() {
       </header>
 
       {/* Mobile Menu */}
+
       <div className={`mobile-nav ${menuOpen ? "show" : ""}`}>
 
-        <a href="#home" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/amit-hospital-client/"
+          onClick={() => setMenuOpen(false)}
+        >
           Home
-        </a>
+        </Link>
 
-        <a href="#about" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/amit-hospital-client/about"
+          onClick={() => setMenuOpen(false)}
+        >
           About
-        </a>
+        </Link>
 
-        <a href="#services" onClick={() => setMenuOpen(false)}>
+        <a
+          href="/amit-hospital-client/#services"
+          onClick={() => setMenuOpen(false)}
+        >
           Services
         </a>
 
-        <a href="#contact" onClick={() => setMenuOpen(false)}>
+        <a
+          href="/amit-hospital-client/#contact"
+          onClick={() => setMenuOpen(false)}
+        >
           Contact
         </a>
 

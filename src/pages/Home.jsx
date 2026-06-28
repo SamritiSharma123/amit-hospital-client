@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Facilities from "../components/Facilities";
+import Services from "../components/Services";
+
 import "./Home.css";
 
 function Home(){
@@ -13,6 +15,8 @@ function Home(){
       <Hero />
 
       <Facilities />
+
+      <Services />
 
     </div>
   )

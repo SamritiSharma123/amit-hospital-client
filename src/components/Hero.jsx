@@ -34,9 +34,7 @@ function Hero() {
       <div className="hero-content">
         <div className="left">
 
-          <span className="tag">
-            CHEST • DIABETES SPECIALIST
-          </span>
+         
 
           <h1>
             Premium Care <br />
